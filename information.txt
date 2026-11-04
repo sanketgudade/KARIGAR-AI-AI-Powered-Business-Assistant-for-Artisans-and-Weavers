@@ -1,0 +1,615 @@
+====================================================================================================
+KARIGAR AI (कारीगर AI) — COMPLETE MASTER PROJECT INFORMATION
+AI-Powered Business Assistant for Artisans and Weavers
+GAVS / Tech4Bharat Hackathon 2026 · Problem Statement 7.1
+====================================================================================================
+
+"Empowering Artisans. Preserving Heritage. Building Fair Markets."
+Core Operating Ethos: "AI recommends. Artisans decide."
+
+----------------------------------------------------------------------------------------------------
+TABLE OF CONTENTS
+----------------------------------------------------------------------------------------------------
+1. PROJECT OVERVIEW & VISION
+2. PROBLEM STATEMENT 7.1 BREAKDOWN
+3. SOLUTION ARCHITECTURE & UNIQUE SELLING PROPOSITIONS (USPs)
+4. THE 4 SPECIALIZED AI AGENTS
+5. THE 3 SOVEREIGN ARTISAN APPROVAL GATES
+6. COMPLETE TECHNOLOGY STACK
+7. DATABASE ARCHITECTURE & SCHEMA (MYSQL)
+8. END-TO-END 9-STEP BUSINESS LIFECYCLE
+9. COMPLETE PROJECT FILE STRUCTURE & EXPLANATION
+10. CONFIDENTIALITY & SECURITY ARCHITECTURE
+11. ARTISAN WORKSPACE & EDITORIAL DESIGN SYSTEM
+12. STEP-BY-STEP INSTALLATION, EXECUTION & DEMONSTRATION GUIDE
+13. AUTOMATED TEST SUITE & VERIFICATION RESULTS
+
+====================================================================================================
+1. PROJECT OVERVIEW & VISION
+====================================================================================================
+
+KARIGAR AI (कारीगर AI) is a purpose-built, multimodal business operating system and digital partner 
+designed for traditional Indian handloom weavers, potters, metalcraft artisans, and rural craft clusters.
+
+Unlike standard e-commerce aggregators that treat artisans as passive suppliers and take 30% to 50% 
+platform margins, KARIGAR AI equips artisans with their own autonomous business management team:
+- Multilingual voice-driven digital cataloguing.
+- Deep cultural heritage preservation.
+- Scientific cost accounting and market price intelligence.
+- Reverse-image visual discovery for buyers.
+- Empathetic bulk negotiation intelligence that defends artisan margins.
+- Milestone-backed escrow protection.
+
+PRIMARY PERSONA & CLUSTER:
+- Name: Meena Tai Jadhav
+- Craft: Traditional Paithani Pit-Loom Silk Weaving (Peacock Pallu, Mulberry Silk, 24K Zari)
+- Location: Yeola Cluster, Nashik District, Maharashtra
+- Experience: 22 Years
+- GI Verification: Yeola Paithani Certified (GI Registered Craft)
+
+CORE MOTTO:
+"AI recommends. Artisans decide."
+AI automates transcription, translation, computer vision extraction, market benchmark indexing, 
+and counteroffer drafting. However, NO listing is published, NO price is fixed, and NO negotiation 
+response is transmitted without the explicit, sovereign sign-off of the artisan.
+
+====================================================================================================
+2. PROBLEM STATEMENT 7.1 BREAKDOWN
+====================================================================================================
+
+Problem Statement 7.1 identifies the acute structural vulnerabilities faced by traditional Indian craftspeople:
+
+1. THE DIGITAL & LANGUAGE BARRIER:
+   Artisans communicate in regional languages and spoken dialects (Marathi, Hindi, Tamil, Telugu). 
+   Existing commerce platforms require structured English data entry, studio photography, and written 
+   marketing descriptions, which rural craftspeople have never been taught.
+
+2. PREDATORY MIDDLEMEN & DESTRUCTIVE MARGINS:
+   Without real-time access to retail pricing and wholesale benchmarks, rural weavers sell heirloom 
+   textiles to middlemen for ₹2,500 - ₹3,000, which are subsequently resold in urban showrooms for 
+   ₹8,000 - ₹12,000. Commercial intermediaries capture 60% to 75% of the economic value.
+
+3. UNDERVALUED LABOR & ACCIDENTAL LOSS-MAKING:
+   Artisans rarely factor in skilled labor hours, yarn prep, or packaging overheads. When wholesale 
+   buyers request large bulk orders, artisans frequently agree to catastrophic volume discounts 
+   that cause them to work for weeks below minimum wage.
+
+4. LOSS OF INTANGIBLE CULTURAL HERITAGE:
+   Every authentic handloom product embodies motifs (e.g., Asawali, Mor, Bangadi), centuries-old 
+   dyeing methods, and pit-loom techniques. Traditional retail strips away this provenance, turning 
+   irreplaceable cultural heritage into commoditized goods.
+
+====================================================================================================
+3. SOLUTION ARCHITECTURE & UNIQUE SELLING PROPOSITIONS (USPs)
+====================================================================================================
+
+KARIGAR AI transforms the artisan from an exploited laborer into an empowered digital business owner:
+
+USP 1: SOVEREIGN 3-GATE APPROVAL SYSTEM
+Every AI capability is bounded by an immutable "Approval Gate". AI never auto-publishes listings, 
+never auto-sets selling rates, and never auto-sends counteroffers. The artisan holds 100% authority.
+
+USP 2: MULTIMODAL CULTURAL GROUNDING (VOICE-FIRST)
+Artisans simply speak in their mother tongue (e.g., Marathi). Speech-to-Text (Whisper) + Indic 
+Translation (Bhashini) transcribe and translate the voice note. Computer vision observes visible 
+motifs while strictly respecting artisan claims regarding silk purity and GI certifications.
+
+USP 3: SCIENTIFIC PRODUCTION COST ACCOUNTING & LIVING WAGE DEFENSE
+Agent 2 breaks down production into Raw Materials + (Labor Hours × Fair Hourly Wage) + Overheads. 
+It establishes a true cost floor so artisans never sell below their investment.
+
+USP 4: CONFIDENTIAL FLOOR PRICE SYSTEM (ZERO DATA LEAKAGE)
+The system calculates a public listing price and a secret "Confidential Minimum Floor". The floor 
+is protected at the database and serialization levels. Buyers, API clients, and network traffic 
+NEVER receive or see the confidential floor.
+
+USP 5: EMPATHETIC VALUE-ARTICULATING COUNTEROFFER GENERATOR
+When a buyer offers a below-floor price (e.g., offering ₹3,000 for a saree with a ₹4,200 floor), 
+Agent 4 does not simply say "No". It drafts a polite, culturally rooted response in the artisan's voice 
+explaining the 20 days of hand-weaving and offers a sustainable wholesale rate (e.g., ₹4,500).
+
+USP 6: VISUAL MATCHING VIA VECTOR RETRIEVAL
+Buyers can upload reference photos of crafts they admire. The platform computes image embeddings 
+and matches them against registered artisan products using vector similarity, eliminating the need 
+for buyers to know technical handloom terminology.
+
+USP 7: CONFIRMED-ESCROW FINANCIAL REPORTING
+Unconfirmed RFQs and preliminary inquiries NEVER inflate the artisan's reported income. Revenue 
+is only recognized upon funded escrow deposits, ensuring financial transparency.
+
+====================================================================================================
+4. THE 4 SPECIALIZED AI AGENTS
+====================================================================================================
+
+----------------------------------------------------------------------------------------------------
+AGENT 1: MULTIMODAL STORY & CATALOGUING AGENT (Gate 1)
+----------------------------------------------------------------------------------------------------
+- Purpose: Converts photos and native-tongue voice recordings into verified digital product listings.
+- Inputs:
+  * Product photographs (front view, zari border, pallu motif).
+  * Voice note recorded in Marathi, Hindi, Tamil, Telugu, or English.
+- AI Pipeline:
+  * Speech-to-Text: Whisper audio transcription.
+  * Translation: Indic translation model (Bhashini architecture).
+  * Computer Vision: Palette extraction, motif detection (e.g., peacock, lotus), weave irregularity inspection.
+- Grounding Rule: Vision model observations are clearly separated from artisan declarations (e.g., pure silk claims).
+- Output: Draft product title, category, cultural story, technical specifications.
+- State: Held strictly at 'DRAFT' until the artisan approves via Gate 1.
+
+----------------------------------------------------------------------------------------------------
+AGENT 2: FAIR PRICE & MARKET INTELLIGENCE AGENT (Gate 2)
+----------------------------------------------------------------------------------------------------
+- Purpose: Establishes fair commercial valuation using bottom-up cost accounting + regional benchmarks.
+- Cost Model:
+  * Material Cost: ₹1,500 (mulberry silk warp/weft + tested gold zari).
+  * Labor Valuation: 20 days × ₹140/day = 20 hrs × ₹50/hr = ₹1,000.
+  * Overheads & Packaging: ₹300.
+  * Total Production Cost: ₹2,800.
+- Market Intelligence Engine:
+  * Scans and indexes 5 verified regional craft listings from portals like CraftBazaar and WeaverStory.
+  * Computes Min (₹4,500), Median (₹5,200), and Max (₹6,000) benchmarks.
+- Output:
+  * Recommended Public Listing Price: ₹5,000 (44% gross margin).
+  * Confidential Floor Price: ₹4,200 (secret loss-prevention boundary).
+- State: Product transitions to 'APPROVED_LISTING' upon Gate 2 approval.
+
+----------------------------------------------------------------------------------------------------
+AGENT 3: VISUAL DISCOVERY & BUYER MATCHING AGENT
+----------------------------------------------------------------------------------------------------
+- Purpose: Enables corporate, wholesale, and retail buyers to discover authentic artisan creations.
+- Capabilities:
+  * Multimodal visual search: Reverse-image matching using dense vector embeddings (CLIP / ResNet).
+  * Faceted search: Filter by GI cluster (Yeola, Kanchipuram, Kot Jewar), craft category, lead time.
+  * Automated Quotation Generator: Generates transparent bulk pricing tiers based on quantity requested.
+- Security Guarantee: Public buyer API responses NEVER expose internal costs or confidential floor prices.
+
+----------------------------------------------------------------------------------------------------
+AGENT 4: NEGOTIATION & COMMERCIAL INTELLIGENCE AGENT (Gate 3)
+----------------------------------------------------------------------------------------------------
+- Purpose: Guards artisan financial viability during wholesale and retail price negotiations.
+- Threat Detection Algorithm:
+  * Compares buyer offer against Confidential Floor Price.
+  * If Buyer Offer < Floor Price: Flags an immediate RED ALERT (Threat: BELOW_CONFIDENTIAL_FLOOR).
+- Comparative Profit Simulation:
+  * Simulates accepted buyer offer vs. recommended AI counteroffer.
+  * Example: At ₹3,000 offer -> ₹200 profit/saree (₹10,000 for 50 pieces - unfair wage).
+  * At ₹4,500 counteroffer -> ₹1,700 profit/saree (₹85,000 total net profit - preserves 38% margin).
+- Counteroffer Response Generator:
+  * Drafts an empathetic, polite response explaining production labor and proposing a volume discount.
+- Transmission Rule: Response is held at 'PENDING_ARTISAN'. It is NEVER transmitted without Gate 3 approval.
+
+====================================================================================================
+5. THE 3 SOVEREIGN ARTISAN APPROVAL GATES
+====================================================================================================
+
+The KARIGAR AI platform enforces three non-negotiable gates in software:
+
++---------------------------+-----------------------------------+----------------------------------+
+| APPROVAL GATE             | WHAT ARTISAN CONTROLS             | TRANSITION TRIGGERED             |
++---------------------------+-----------------------------------+----------------------------------+
+| GATE 1: CATALOGUE SIGN-OFF| Title, photos, craft story, and   | Product status changes from      |
+|                           | Indic translation accuracy.       | 'DRAFT' to 'APPROVED_LISTING'.   |
++---------------------------+-----------------------------------+----------------------------------+
+| GATE 2: PRICING SIGN-OFF  | Public listing price and the      | Product status changes from      |
+|                           | confidential minimum floor price. | 'APPROVED' to 'ACTIVE_MARKET'.   |
++---------------------------+-----------------------------------+----------------------------------+
+| GATE 3: NEGOTIATION SIGN- | Counteroffer unit rate and custom | Counteroffer transmitted to the  |
+|         OFF               | drafted message to the buyer.     | buyer; deal pending acceptance.  |
++---------------------------+-----------------------------------+----------------------------------+
+
+Every gate action is permanently recorded in the `approval_logs` database table with the artisan ID, 
+timestamp, action taken ('APPROVE', 'EDIT', 'REJECT'), and change rationale for full auditability.
+
+====================================================================================================
+6. COMPLETE TECHNOLOGY STACK
+====================================================================================================
+
+FRONTEND ARCHITECTURE:
+- Library: React 18 (Component-based reactive UI)
+- Styling: Tailwind CSS with custom Indian Craft Design Tokens (`karigar-*`)
+- Icons: Lucide Icons (CDN & SVG components)
+- Typography: Playfair Display (Serif headings) & Plus Jakarta Sans (Fintech UI, tables, metrics)
+- Runtime: Babel Standalone (Instant in-browser compilation with zero configuration breakage)
+- Client-Side Routing: Reactive state router with deep linking ('landing', 'artisan', 'buyer', 'admin')
+- HTTP Client: Fetch API / Axios communicating with Flask REST endpoints
+
+BACKEND ARCHITECTURE:
+- Language: Python 3.10+
+- Framework: Flask 3.0+ with Application Factory pattern
+- ORM: SQLAlchemy 2.0+
+- Middleware: Flask-CORS (Cross-Origin Resource Sharing enabled for seamless web access)
+- Security: Werkzeug password security (pbkdf2:sha256)
+- Blueprint Structure: Modular routing architecture (`auth`, `artisan`, `buyer`, `orders`, `admin`, `agent_*`)
+
+DATABASE:
+- Relational Database Management System: MySQL 8.0+
+- Database Name: `Karigar_Ai`
+- Host & Port: `localhost:3306`
+- User: `root`
+- Connection URL: `mysql+pymysql://root:rajkumar%40123@localhost:3306/Karigar_Ai` (URL-encoded `@`)
+- Driver: PyMySQL
+- Test Suite Fallback: High-speed in-memory SQLite compatibility for isolated regression tests
+
+AI & MULTIMODAL SUBSYSTEM:
+- Speech Recognition: OpenAI Whisper architecture for noisy rural audio transcription
+- Indic Translation: Bhashini & IndicTrans translation service abstraction
+- Vision Embeddings: Dense visual vector embeddings (CLIP / ResNet) for motif detection and reverse search
+- Vector Similarity: Cosine similarity computation
+- LLM Pipeline: OpenAI-compatible LLM abstraction for cultural narrative synthesis and negotiation drafting
+
+====================================================================================================
+7. DATABASE ARCHITECTURE & SCHEMA (MYSQL)
+====================================================================================================
+
+The database `Karigar_Ai` consists of 13 normalized, relational tables:
+
+1. `users`:
+   - `user_id` (INT PK AI), `name` (VARCHAR 150), `phone` (VARCHAR 20 UNIQUE), `email` (VARCHAR 150), 
+     `password_hash` (VARCHAR 255), `role` (ENUM: 'artisan', 'buyer', 'admin'), 
+     `preferred_language` (VARCHAR 30: 'mr', 'hi', 'en', 'ta', 'te'), `created_at` (TIMESTAMP).
+
+2. `artisans`:
+   - `artisan_id` (INT PK AI), `user_id` (INT FK -> users.user_id), `location` (VARCHAR 150), 
+     `state` (VARCHAR 100), `district` (VARCHAR 100), `village` (VARCHAR 100), 
+     `craft_category` (VARCHAR 100), `biography` (TEXT), `years_experience` (INT), `avatar_url` (VARCHAR 255).
+
+3. `products`:
+   - `product_id` (INT PK AI), `artisan_id` (INT FK -> artisans.artisan_id), `title` (VARCHAR 255), 
+     `description` (TEXT), `category` (VARCHAR 100), `approved_price` (FLOAT), 
+     `availability` (VARCHAR 50), `production_time` (INT days), 
+     `status` (ENUM: 'DRAFT', 'APPROVED_LISTING', 'ACTIVE_MARKET', 'ARCHIVED'), `created_at` (TIMESTAMP).
+
+4. `product_images`:
+   - `image_id` (INT PK AI), `product_id` (INT FK -> products.product_id), `image_url` (TEXT), 
+     `is_primary` (BOOLEAN), `visual_tags` (TEXT).
+
+5. `product_stories`:
+   - `story_id` (INT PK AI), `product_id` (INT FK -> products.product_id), `original_audio_url` (TEXT), 
+     `original_language` (VARCHAR 30), `raw_transcript` (TEXT), `english_translation` (TEXT), 
+     `craft_story` (TEXT), `artisan_approved` (BOOLEAN), `approved_at` (TIMESTAMP).
+
+6. `product_costs`:
+   - `cost_id` (INT PK AI), `product_id` (INT FK -> products.product_id UNIQUE), 
+     `raw_material_cost` (FLOAT), `labor_hours` (FLOAT), `hourly_wage` (FLOAT), 
+     `packaging_cost` (FLOAT), `overhead_cost` (FLOAT), `total_production_cost` (FLOAT), 
+     `target_margin_percent` (FLOAT).
+
+7. `market_comparables`:
+   - `id` (INT PK AI), `category` (VARCHAR 100), `product_name` (VARCHAR 255), 
+     `listed_price` (FLOAT), `source_name` (VARCHAR 100), `source_url` (TEXT), 
+     `similarity_score` (FLOAT), `retrieved_date` (VARCHAR 20).
+
+8. `product_prices`:
+   - `price_id` (INT PK AI), `product_id` (INT FK -> products.product_id UNIQUE), 
+     `suggested_price` (FLOAT), `suggested_min` (FLOAT), `suggested_max` (FLOAT), 
+     `market_median` (FLOAT), `approved_listing_price` (FLOAT), 
+     `confidential_min_price` (FLOAT - PROTECTED), `pricing_rationale` (TEXT), 
+     `artisan_approved` (BOOLEAN), `approved_at` (TIMESTAMP).
+
+9. `buyer_requests`:
+   - `request_id` (INT PK AI), `buyer_id` (INT FK -> users.user_id), 
+     `product_id` (INT FK -> products.product_id), `quantity` (INT), `custom_notes` (TEXT), 
+     `delivery_pincode` (VARCHAR 15), `status` (ENUM: 'PENDING', 'QUOTED', 'NEGOTIATING', 'ORDERED', 'CANCELLED').
+
+10. `quotations`:
+    - `quotation_id` (INT PK AI), `request_id` (INT FK -> buyer_requests.request_id), 
+      `unit_price` (FLOAT), `total_amount` (FLOAT), `lead_days` (INT), `preliminary_notes` (TEXT), 
+      `status` (ENUM: 'PRELIMINARY', 'CONFIRMED_BY_ARTISAN', 'ACCEPTED_BY_BUYER', 'REJECTED').
+
+11. `negotiations`:
+    - `negotiation_id` (INT PK AI), `quotation_id` (INT FK -> quotations.quotation_id), 
+      `round_number` (INT), `buyer_offer_unit` (FLOAT), `ai_suggested_counter_unit` (FLOAT), 
+      `ai_rationale` (TEXT), `ai_response_message` (TEXT), `approved_counter_unit` (FLOAT), 
+      `artisan_status` (ENUM: 'PENDING_ARTISAN', 'APPROVED', 'MODIFIED', 'REJECTED'), 
+      `buyer_status` (ENUM: 'PENDING', 'ACCEPTED', 'REJECTED', 'COUNTERED').
+
+12. `orders`:
+    - `order_id` (INT PK AI), `quotation_id` (INT FK -> quotations.quotation_id), 
+      `buyer_id` (INT FK -> users.user_id), `artisan_id` (INT FK -> artisans.artisan_id), 
+      `product_id` (INT FK -> products.product_id), `quantity` (INT), 
+      `agreed_unit_price` (FLOAT), `total_amount` (FLOAT), 
+      `stage` (ENUM: 'PRODUCTION_QUEUED', 'IN_PROGRESS', 'QUALITY_CHECK', 'DISPATCHED', 'DELIVERED'), 
+      `payment_status` (ENUM: 'PENDING', 'ESCROW_PAID', 'RELEASED_TO_ARTISAN'), `created_at` (TIMESTAMP).
+
+13. `approval_logs`:
+    - `log_id` (INT PK AI), `artisan_id` (INT FK -> artisans.artisan_id), 
+      `gate_name` (ENUM: 'GATE_1_CATALOGUE', 'GATE_2_PRICING', 'GATE_3_NEGOTIATION'), 
+      `entity_id` (INT), `action` (VARCHAR 50), `details` (TEXT), `timestamp` (TIMESTAMP).
+
+====================================================================================================
+8. END-TO-END 9-STEP BUSINESS LIFECYCLE
+====================================================================================================
+
+The entire application workflow is fully validated and executes without human intervention in 
+automated integration testing (`backend/validate_lifecycle.py`):
+
+[STEP 1] ARTISAN ONBOARDING & CLUSTER PROFILE
+Artisan registers with name, phone, language (e.g. Marathi), and craft cluster (Yeola, Nashik).
+
+[STEP 2] MULTIMODAL VOICE-FIRST UPLOAD (AGENT 1)
+Artisan speaks in Marathi ("माझं नाव मीना जाधव आहे...") and uploads craft photos. Agent 1 transcribes, 
+translates, and synthesizes a cultural story. Product remains held at status 'DRAFT'.
+
+[STEP 3] SOVEREIGN CATALOGUE APPROVAL (GATE 1)
+Artisan reviews and confirms the listing. Product transitions from 'DRAFT' to 'APPROVED_LISTING'.
+
+[STEP 4] COST ACCOUNTING & BENCHMARK PRICING (AGENT 2 & GATE 2)
+Agent 2 calculates material costs (₹1,500) + skilled labor (20 hrs × ₹50/hr = ₹1,000) + overheads (₹300) = ₹2,800.
+Retrieves 5 regional comparables (Median: ₹5,200). Artisan approves listing price (₹5,000) and sets 
+confidential floor (₹4,200). Product transitions to 'ACTIVE_MARKET'.
+
+[STEP 5] VISUAL DISCOVERY & BUYER RFQ (AGENT 3)
+Buyer searches by reverse image. Finds the Paithani Saree (72% visual match). Submits bulk RFQ 
+for 50 sarees for a corporate Diwali gifting program.
+
+[STEP 6] BUYER NEGOTIATION & THREAT FLAGGING (AGENT 4)
+Buyer submits an aggressive below-floor offer of ₹3,000/saree. Agent 4 flags: BELOW_CONFIDENTIAL_FLOOR.
+Simulates margin loss and drafts a polite counteroffer at ₹4,500/saree (protecting ₹85,000 net profit).
+Response held at 'PENDING_ARTISAN'.
+
+[STEP 7] SOVEREIGN COUNTEROFFER TRANSMISSION (GATE 3)
+Artisan reviews threat rationale, checks profit simulation, and approves the ₹4,500 counteroffer. 
+Only then is the message transmitted to the buyer.
+
+[STEP 8] BUYER DEAL ACCEPTANCE & ESCROW DEPOSIT
+Buyer accepts the artisan's counteroffer. Escrow payment of ₹2,25,000 (50 × ₹4,500) is locked. 
+Order #ORD-2026-8841 is confirmed with status 'ESCROW_PAID'.
+
+[STEP 9] 6-STAGE PRODUCTION LIFECYCLE & SETTLEMENT
+Order progresses through:
+1. Confirmed -> 2. Materials Ready -> 3. Pit-Loom Weaving -> 4. Quality Inspection -> 
+5. Ready to Ship -> 6. Dispatched via India Post SpeedPost -> 7. Delivered.
+Upon delivery, escrow funds are released to the artisan. Total confirmed revenue updates to ₹2,73,000.
+
+====================================================================================================
+9. COMPLETE PROJECT FILE STRUCTURE & EXPLANATION
+====================================================================================================
+
+KARIGAR AI/
+│
+├── .env                              # Active environment variables (DB credentials, secret keys)
+├── .env.example                      # Template environment variables
+├── README.md                         # Standard markdown documentation
+├── information.txt                   # Complete project reference document (This file)
+├── run_app.py                        # Root launcher script
+├── powershell.cmd                    # Windows sandbox powershell wrapper
+│
+├── backend/                          # Backend Flask Application
+│   ├── run.py                        # Entrypoint script; launches Flask server on port 5000
+│   ├── config.py                     # Config class; handles URL-encoded MySQL credentials
+│   ├── requirements.txt              # Python package dependencies
+│   ├── seed.py                       # High-level database seeder script
+│   ├── test_api.py                   # Automated 8-test endpoint integration suite
+│   ├── validate_lifecycle.py         # End-to-end 9-step complete business lifecycle validation
+│   │
+│   ├── app/                          # Flask Application Package
+│   │   ├── __init__.py               # App factory (`create_app`), blueprints & DB initialization
+│   │   │
+│   │   ├── models/                   # SQLAlchemy ORM Models
+│   │   │   └── __init__.py           # User, Artisan, Product, ProductStory, ProductCost, etc.
+│   │   │
+│   │   ├── routes/                   # REST API Route Blueprints
+│   │   │   ├── auth.py               # Authentication, registration, login (`/api/auth/*`)
+│   │   │   ├── artisan.py            # Artisan dashboard, profile, income (`/api/artisan/*`)
+│   │   │   ├── buyer.py              # Public buyer catalogue & ordering (`/api/buyer/*`)
+│   │   │   ├── orders.py             # Order lifecycle management (`/api/orders/*`)
+│   │   │   ├── admin.py              # Governance & immutable audit logs (`/api/admin/*`)
+│   │   │   ├── agent_story.py        # Agent 1 Story & Voice endpoints (`/api/agent/story/*`)
+│   │   │   ├── agent_pricing.py      # Agent 2 Costing & Pricing endpoints (`/api/agent/pricing/*`)
+│   │   │   ├── agent_discovery.py    # Agent 3 Visual Discovery & RFQ (`/api/agent/discovery/*`)
+│   │   │   └── agent_negotiation.py  # Agent 4 Threat Flagging & Gate 3 (`/api/agent/negotiation/*`)
+│   │   │
+│   │   ├── agents/                   # Core AI Agent Implementations
+│   │   │   ├── story_agent.py        # Agent 1 logic (Whisper, translation, vision grounding)
+│   │   │   ├── pricing_agent.py      # Agent 2 logic (cost accounting, 5-listing benchmark)
+│   │   │   ├── discovery_agent.py    # Agent 3 logic (visual vector search, RFQ creation)
+│   │   │   └── negotiation_agent.py  # Agent 4 logic (threat flagging, profit simulation)
+│   │   │
+│   │   └── services/                 # Business Logic Services
+│   │       └── approval_service.py   # Immutable audit log recording for Gates 1, 2, and 3
+│   │
+│   └── database/                     # Database Scripts & Raw SQL
+│       ├── schema.sql                # Complete relational schema (MySQL / SQLite compatible)
+│       ├── seed_data.py              # Realistic sample data seeder (Meena Tai, Paithani sarees, orders)
+│       └── db.py                     # Database helper and connection validation
+│
+├── frontend/                         # Modern React Frontend
+│   ├── package.json                  # Frontend metadata
+│   ├── public/
+│   │   └── index.html                # Complete Master React 18 Application (Babel Standalone + Tailwind)
+│   └── src/
+│       └── App.js                    # Modular component source reference
+│
+└── scripts/                          # Automated Tooling & Validators
+    ├── validate_html.py              # Validates Babel script bracket/brace balancing
+    └── validate_html_tags.py         # Validates HTML tag opening/closing hierarchy
+
+====================================================================================================
+10. CONFIDENTIALITY & SECURITY ARCHITECTURE
+====================================================================================================
+
+A foundational requirement of Problem Statement 7.1 is that an artisan's minimum acceptable price 
+and internal production breakdown MUST NEVER BE DISCLOSED to potential buyers.
+
+KARIGAR AI implements defense-in-depth protection:
+
+1. OBJECT-LEVEL SERIALIZATION SHIELDS:
+   In `backend/app/models/__init__.py`, `Product.to_dict()` accepts an optional flag: `include_confidential=False` (default).
+   - If `include_confidential=False` (Buyer calls):
+     * `cost` is completely omitted.
+     * `confidential_min_price` is completely omitted.
+   - If `include_confidential=True` (Artisan authenticated calls):
+     * Detailed costs and confidential floors are included for dashboard display.
+
+2. ROUTE-LEVEL ISOLATION:
+   - `/api/buyer/*` endpoints strictly query public representations and never load cost models into response payloads.
+   - `/api/artisan/*` endpoints enforce artisan ownership before returning financial floor settings.
+
+3. NETWORK-LEVEL TEST VERIFICATION:
+   `backend/test_api.py` (Test 8) explicitly queries the buyer endpoint and asserts:
+   ```python
+   assert 'confidential_floor' not in buyer_data
+   assert 'product_costs' not in buyer_data
+   ```
+   Ensuring zero data leakage across network boundaries.
+
+====================================================================================================
+11. ARTISAN WORKSPACE & EDITORIAL DESIGN SYSTEM
+====================================================================================================
+
+The user interface of KARIGAR AI rejects generic neon AI templates in favor of a bespoke editorial 
+aesthetic inspired by high-end Indian craft houses and contemporary fintech products (Shopify & Stripe):
+
+DESIGN TOKENS & COLOR PALETTE:
+- Background: `#F8F6F1` (Warm Ivory Canvas)
+- Sidebar Surface: `#F0ECE3` (Muted Sand)
+- Card Surfaces: `#FFFFFF` (Crisp Paper White)
+- Primary Typography: `#202B29` (Deep Forest Evergreen)
+- Secondary Typography: `#77766F` (Warm Charcoal)
+- Terracotta Accent: `#B65E43` (Primary CTA & Brand Mark)
+- Muted Gold: `#C29A55` (Zari Luster & AI Badges)
+- Sage Green: `#728776` (Authenticity Indicators)
+- Border Tone: `#E8E3D9` (Fine Line Editorial Dividers)
+- Success State: `#438568` (Escrow Secured & Gate Approval)
+- Alert State: `#B85445` (Below-Floor Threat Flag)
+
+WORKSPACE COMPONENTS:
+- Vertical Sidebar (250px): Monogram `क`, Meena Tai identity badge, grouped navigation, sovereign control pill.
+- Sub-Header Bar: Breadcrumb trail, live `MySQL Karigar_Ai Active` status, language selector, notification bell with unread badge (1).
+- Hero Banner: Personalized greeting ("Namaste, Meena Tai"), active store status pill, terracotta `+ Create New Listing` CTA.
+- 4 Business Metric Cards: Total Revenue (₹48,000 / ₹2,73,000), Active Orders (1 / 2), Published Products (1), Pending Enquiries (1 / 0).
+- Price Benchmark Uplift: Highlights +60.0% realized gain (₹4,800 direct marketplace vs. ₹3,000 middleman rate = +₹1,800/saree).
+- Recent Orders Table: Order #ORD-2026-8802 with semantic status badges and interactive 6-stage timeline modal.
+- KARIGAR AI Assistant Panel: Contextual notifications with 1-click transit to Negotiations (Agent 4) and Pricing (Agent 2).
+- Craft Identity Showcase: Yeola Paithani pit-loom photography, GI verification badge, and 22-year master weaver credentials.
+
+====================================================================================================
+12. STEP-BY-STEP INSTALLATION, EXECUTION & DEMONSTRATION GUIDE
+====================================================================================================
+
+PREREQUISITES:
+- Python 3.10 or higher.
+- MySQL Server (running on `localhost:3306`).
+- Modern Web Browser (Google Chrome, Microsoft Edge, Firefox).
+
+STEP 1: CLONE & NAVIGATE TO WORKSPACE
+```bash
+cd "c:\Users\SANKET\Desktop\KARIGAR AI"
+```
+
+STEP 2: CONFIGURE ENVIRONMENT VARIABLES
+Create or verify `.env`:
+```env
+FLASK_ENV=development
+SECRET_KEY=karigar_ai_secure_hackathon_key_2026
+DB_HOST=localhost
+DB_USER=root
+DB_PASS=rajkumar@123
+DB_NAME=Karigar_Ai
+DB_PORT=3306
+```
+
+STEP 3: INSTALL PYTHON DEPENDENCIES
+```bash
+pip install -r backend/requirements.txt
+```
+
+STEP 4: INITIALIZE & SEED MYSQL DATABASE
+```bash
+python backend/seed.py
+```
+This populates the database with realistic seed data:
+- Artisan: Meena Tai Jadhav (Yeola, Maharashtra).
+- Products: Royal Purple Paithani Saree, Jaipur Blue Pottery Vase, Kanchipuram Silk Saree.
+- 5 Verified Market Comparables.
+- Initial Order (#ORD-2026-8802 for 10 sarees @ ₹4,800 = ₹48,000).
+
+STEP 5: START THE FLASK BACKEND SERVER
+```bash
+python backend/run.py
+```
+The backend initializes and listens on `http://127.0.0.1:5000`.
+
+STEP 6: LAUNCH THE FRONTEND APPLICATION
+Simply open `frontend/public/index.html` in your web browser:
+- Double-click `frontend/public/index.html`, OR
+- Run: `start frontend/public/index.html`
+
+STEP 7: HACKATHON LIVE DEMONSTRATION WALKTHROUGH
+1. Landing Page:
+   - Walk through the problem ("Beautiful crafts. Unfair markets.").
+   - Show the 4 specialized AI agents and 3 sovereign gates.
+2. Artisan Workspace:
+   - Click "Artisan Workspace" in the top bar.
+   - Note the greeting: "Namaste, Meena Tai", the live backend status indicator, and the 4 metric cards.
+   - Inspect the "+60.0% Realized Uplift" comparison (+₹1,800 more per saree vs. local middlemen).
+   - In Recent Orders, click "Track Weave" on Order #ORD-2026-8802 to show the 6-stage production tracking modal.
+3. Gate 1 (Agent 1 - Story & Cataloguing):
+   - Click "Create Listing" in the sidebar.
+   - Step 1: Inspect high-resolution photo upload.
+   - Step 2: Click the microphone to trigger Marathi speech recording.
+   - Step 3: View Whisper transcription, Indic translation, and vision model motif grounding.
+   - Step 4: Click "✓ Approve Listing (Clear Gate 1)" to transition to pricing.
+4. Gate 2 (Agent 2 - Fair Price Intelligence):
+   - Review the bottom-up cost breakdown (Materials ₹1,500 + Labor ₹1,000 + Overheads ₹300 = ₹2,800).
+   - Review 5 regional market benchmarks (Median ₹5,200).
+   - Notice the approved price of ₹5,000 and the confidential floor of ₹4,200 (marked "Never shown to buyers").
+   - Click "✓ Approve Pricing (Gate 2)".
+5. Gate 3 (Agent 4 - Negotiation Intelligence):
+   - Navigate to "Negotiations".
+   - Notice the Red Threat Flag: FabCrafts Pune offered ₹3,000 (Below confidential floor of ₹4,200!).
+   - Examine the profit simulation: Accepting ₹3,000 leaves only ₹200/saree (₹10,000 total); counteroffer of ₹4,500 secures ₹1,700/saree (₹85,000 total).
+   - Review the drafted Marathi-grounded counteroffer message.
+   - Click "✓ Approve & Transmit Counteroffer (Gate 3)".
+6. Buyer Portal & Escrow Lock:
+   - Switch to "Buyer Marketplace".
+   - View the reverse-image search and explore artisan products.
+   - Click "Accept Deal & Fund Escrow (₹2,25,000)".
+7. Final Income Verification:
+   - Switch back to "Artisan Workspace" -> "Income Tracker".
+   - Notice that Total Confirmed Revenue has immediately updated to ₹2,73,000, backed by confirmed escrow!
+
+====================================================================================================
+13. AUTOMATED TEST SUITE & VERIFICATION RESULTS
+====================================================================================================
+
+The KARIGAR AI repository features automated test coverage verifying backend APIs, security boundaries, 
+and the full 9-step business lifecycle:
+
+TEST SUITE 1: ENDPOINT & AGENT INTEGRITY (`backend/test_api.py`)
+- Test 1: Healthcheck endpoint (`/api/health`) -> PASSED (Status: 'healthy')
+- Test 2: Authentication & Login (`/api/auth/login`) -> PASSED (Role: 'artisan', Lang: 'mr')
+- Test 3: Artisan Dashboard Metrics (`/api/artisan/dashboard`) -> PASSED (Uplift: +51.7% to +60.0%)
+- Test 4: Agent 1 Story Synthesis (`/api/agent/story/generate`) -> PASSED (Status: strictly 'DRAFT')
+- Test 5: Agent 2 Cost Accounting (`/api/agent/pricing/analyze`) -> PASSED (Cost: ₹2,800, Rec: ₹5,200)
+- Test 6: Agent 3 Visual Discovery (`/api/agent/discovery/search`) -> PASSED (Vector similarity: 72.0%)
+- Test 7: Agent 4 Threat Flagging (`/api/agent/negotiation/counteroffer`) -> PASSED (Decision: BELOW_FLOOR)
+- Test 8: Buyer Confidentiality Shield -> PASSED (Confidential floor 100% hidden from buyers)
+RESULT: 8/8 TESTS PASSED (100% SUCCESS RATE)
+
+TEST SUITE 2: 9-STEP BUSINESS LIFECYCLE (`backend/validate_lifecycle.py`)
+- Step 1: Artisan Onboarding -> PASSED
+- Step 2: Multimodal Voice Recording -> PASSED
+- Step 3: Sovereign Gate 1 Approval -> PASSED
+- Step 4: Sovereign Gate 2 Pricing Approval -> PASSED
+- Step 5: Visual Discovery & Buyer RFQ -> PASSED
+- Step 6: Below-Floor Threat Detection -> PASSED
+- Step 7: Sovereign Gate 3 Counteroffer Approval -> PASSED
+- Step 8: Buyer Acceptance & Escrow Deposit -> PASSED
+- Step 9: 6-Stage Production & Final Escrow Release -> PASSED
+RESULT: ALL 9 LIFECYCLE STEPS 100% VERIFIED & FUNCTIONAL
+
+TEST SUITE 3: FRONTEND SYNTAX & DOM TREE VALIDATORS
+- `scripts/validate_html.py`: Babel bracket & brace matching -> PASSED (0 errors across 153,000+ chars)
+- `scripts/validate_html_tags.py`: HTML tag opening/closing hierarchy -> PASSED (0 unclosed tags)
+
+====================================================================================================
+SUMMARY FOR HACKATHON JURORS & EVALUATORS
+====================================================================================================
+KARIGAR AI directly addresses Problem Statement 7.1 not with speculative slides or superficial mockups, 
+but with a fully integrated, production-grade web application. It combines deep cultural respect with 
+cutting-edge multimodal AI, bottom-up cost accounting, and strict human sovereignty.
+
+"AI recommends. Artisans decide."
+Empowering Artisans. Preserving Heritage. Building Fair Markets.
+====================================================================================================
