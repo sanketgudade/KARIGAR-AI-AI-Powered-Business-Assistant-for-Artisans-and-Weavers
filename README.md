@@ -30,18 +30,6 @@ Traditional Indian handloom weavers, terracotta potters, woodcraft artisans, and
 
 ---
 
-## 👤 Primary Persona & Craft Cluster
-
-* **Artisan:** **Meena Tai Jadhav**
-* **Cluster:** Yeola Cluster, Nashik District, Maharashtra
-* **Craft Tradition:** Traditional Paithani Pit-Loom Silk Weaving
-* **Signature Heirloom:** Handcrafted Royal Purple Paithani Silk Saree with Peacock (*Mor*) Zari Pallu
-* **Weaving Effort:** 20 Laborious Days on Wooden Pit-Looms
-* **Raw Materials:** Pure Mulberry Silk Warp & Weft, 24K Tested Gold Zari
-* **Certification:** Certified Geographical Indication (GI) Artisan
-
----
-
 ## 🏛 The 4 Specialized AI Agents
 
 ```

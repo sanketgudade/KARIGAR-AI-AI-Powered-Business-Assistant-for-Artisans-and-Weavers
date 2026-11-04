@@ -40,13 +40,6 @@ platform margins, KARIGAR AI equips artisans with their own autonomous business 
 - Empathetic bulk negotiation intelligence that defends artisan margins.
 - Milestone-backed escrow protection.
 
-PRIMARY PERSONA & CLUSTER:
-- Name: Meena Tai Jadhav
-- Craft: Traditional Paithani Pit-Loom Silk Weaving (Peacock Pallu, Mulberry Silk, 24K Zari)
-- Location: Yeola Cluster, Nashik District, Maharashtra
-- Experience: 22 Years
-- GI Verification: Yeola Paithani Certified (GI Registered Craft)
-
 CORE MOTTO:
 "AI recommends. Artisans decide."
 AI automates transcription, translation, computer vision extraction, market benchmark indexing, 
