@@ -76,13 +76,21 @@ Traditional Indian handloom weavers, terracotta potters, woodcraft artisans, and
 * **Wholesale RFQ Generator:** Generates bulk price estimates and displays artisan loom lead times based on requested quantity.
 
 ### 4. Agent 4: Negotiation & Commercial Intelligence Agent (Approval Gate 3)
-* **Threat Detection Algorithm:** Instantly compares buyer offers against the artisan's confidential floor price:
-  $$\text{If } P_{\text{offer}} < P_{\text{floor}} \implies \text{Flag: RED ALERT (BELOW\_CONFIDENTIAL\_FLOOR)}$$
-* **Comparative Margin Simulator:**
-  * At buyer's predatory offer (₹3,000): Weaver earns only ₹200/saree (₹10,000 profit for 50 sarees — subsistence wage).
-  * At AI counteroffer (₹4,500): Weaver earns ₹1,700/saree (₹85,000 net profit healthy 38% commercial margin).
-* **Culturally Grounded Counteroffer Message:** Drafts a polite, dignified response explaining that 20 days of pure mulberry silk weaving cannot be sold at ₹3,000, while extending a sustainable wholesale rate of ₹4,500.
-* **Gate 3 Enforcement:** Counteroffer will **NEVER** be transmitted autonomously. It remains in `PENDING_ARTISAN` until the artisan clicks **Approve & Transmit**.
+
+- **Threat Detection Algorithm:** Instantly compares buyer offers against the artisan's confidential floor price:
+
+  \[
+  P_{\text{offer}} < P_{\text{floor}}
+  \implies \text{Flag: RED ALERT (BELOW\_CONFIDENTIAL\_FLOOR)}
+  \]
+
+- **Comparative Margin Simulator:**
+  - At buyer's predatory offer (₹3,000): Weaver earns only ₹200/saree (₹10,000 profit for 50 sarees — subsistence wage).
+  - At AI counteroffer (₹4,500): Weaver earns ₹1,700/saree (₹85,000 net profit — healthy 38% commercial margin).
+
+- **Culturally Grounded Counteroffer Message:** Drafts a polite, dignified response explaining that 20 days of pure mulberry silk weaving cannot be sold at ₹3,000, while extending a sustainable wholesale rate of ₹4,500.
+
+- **Gate 3 Enforcement:** Counteroffer will **NEVER** be transmitted autonomously. It remains in `PENDING_ARTISAN` until the artisan clicks **Approve & Transmit**.
 
 ---
 
