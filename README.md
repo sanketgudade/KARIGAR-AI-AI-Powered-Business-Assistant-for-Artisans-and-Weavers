@@ -63,7 +63,7 @@ Traditional Indian handloom weavers, terracotta potters, woodcraft artisans, and
 
 ### 2. Agent 2: Fair Price and Market Intelligence Agent (Approval Gate 2)
 * **Production Cost Accounting:** Computes exact cost breakdowns:
-  $$\text{Production Cost} = \text{Raw Materials (₹1,500)} + (\text{20 Hours Worked} \times \text{₹50/hr Fair Wage}) + \text{Packaging \& Overheads (₹300)} = \text{₹2,800}$$
+  $$\text{Production Cost} = \text{Raw Materials (₹1,500)} + (\text{20 Hours Worked} \times \text{₹50/hr Fair Wage}) + \text{Packaging \ Overheads (₹300)} = \text{₹2,800}$$
 * **Regional Market Intelligence:** Automatically scans and indexes 5 verified regional craft listings from portals like *CraftBazaar* and *WeaverStory*, providing real-time Min (₹4,500), Median (₹5,200), and Max (₹6,000) benchmarks.
 * **Pricing Recommendations:**
   * **Suggested Public Listing Price:** ₹5,000 (44% gross margin).
