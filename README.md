@@ -79,10 +79,7 @@ Traditional Indian handloom weavers, terracotta potters, woodcraft artisans, and
 
 - **Threat Detection Algorithm:** Instantly compares buyer offers against the artisan's confidential floor price:
 
-  \[
-  P_{\text{offer}} < P_{\text{floor}}
-  \implies \text{Flag: RED ALERT (BELOW\_CONFIDENTIAL\_FLOOR)}
-  \]
+   `P_offer < P_floor` → **RED ALERT: BELOW_CONFIDENTIAL_FLOOR**
 
 - **Comparative Margin Simulator:**
   - At buyer's predatory offer (₹3,000): Weaver earns only ₹200/saree (₹10,000 profit for 50 sarees — subsistence wage).
