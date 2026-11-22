@@ -1,4 +1,4 @@
-# KARIGAR AI (कारीगर AI)
+# KARIGAR-AI (कारीगर AI)
 ### AI-Powered Business Assistant for Artisans and Weavers
 > **GAVS / Tech4Bharat Hackathon 2026 · Problem Statement 7.1**  
 > *"Empowering Artisans. Preserving Heritage. Building Fair Markets."*  
